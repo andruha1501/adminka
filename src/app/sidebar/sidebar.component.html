@@ -1,0 +1,18 @@
+<div class="sidebar">
+  <md-toolbar color="primary">
+    <md-icon  svgIcon="angular-icon" class="sidebar__icon"></md-icon>
+    <span class="sidebar__title">Material</span>
+    <span class="space"></span>
+    <md-radio-button (click)="isCheckedRadioButt=!isCheckedRadioButt" [checked]="isCheckedRadioButt" [disableRipple]="true" class="sidebar__radio-button"></md-radio-button>
+  </md-toolbar>
+  <a class="sidebar__button" md-button routerLink="."><md-icon class="sidebar__icon">home</md-icon>Dashboard</a>
+  <a class="sidebar__button" md-button routerLink="."><md-icon class="sidebar__icon">settings</md-icon>Customizer</a>
+  <a (click)="isShowListKit=!isShowListKit" class="sidebar__button" md-button routerLink="."><md-icon class="sidebar__icon">bubble_chart</md-icon>UI Kit</a>
+  <ul class="list-kit" *ngIf="isShowListKit">
+    <li *ngFor="let link of links" class="list-kit__item">
+      <a class="list-kit__button" md-button routerLink="."><md-icon class="list-kit__icon">keyboard_arrow_right</md-icon>{{link}}</a> 
+      </li>
+  </ul>
+  <a class="sidebar__button" md-button routerLink="."><md-icon class="sidebar__icon">settings</md-icon>Customizer</a>
+    
+</div>

@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+//@import "custom-style.scss";
+@import "_reset.scss";
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+//@import "_style-component.scss";
+//@include candy-carousel-theme($theme);
+@import "~bootstrap.css";
+* {
+    font-family: 'Roboto', sans-serif;
+   
+}
+a {
+  color: #000 !important;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+      text-decoration: none ;
+  }
+
+}
